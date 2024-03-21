@@ -1,28 +1,27 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:music_app/presentation/provider/search_provider/search_provider.dart';
+import 'package:music_app/presentation/widget/Not%20Found/not_found_widget.dart';
 
 class SearchField extends ConsumerWidget {
   final VoidCallback? onPressed;
-  final TextEditingController controller;
+  final TextEditingController? controller;
 
-  const SearchField({super.key, this.onPressed, required this.controller});
+  const SearchField({super.key, this.onPressed, this.controller});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8 * 2),
       child: TextFormField(
-        
         onChanged: (value) {
           if (value.isEmpty) {
-            controller.clear();
-            ref.watch(searchProvider).clear();
-            ref.invalidate(searchProvider);
+            const NotFound();
           }
-          ref.watch(searchProvider.notifier).songsearch(
-                value,
-              );
+          ref
+              .watch(searchProvider.notifier)
+              .songsearch(value);
         },
         controller: controller,
         decoration: InputDecoration(
