@@ -57,14 +57,11 @@ class LocalHomePage extends ConsumerWidget {
                               builder: (context) {
                                 log(song.value![index].data.toString());
                                 log(song.value.toString());
-                                return SongPlayingPage(
-                                  // option:
-                                  // AudioSource.file(song.value![index].data),
+                                return  SongPlayingPage(
+                                  
                                   data: song.value!,
                                   index: index,
-                                  // playsongs: playmusic(
-                                  //     index: index, playlist: playlist),
-
+                                  
                                   playlist: playlist,
                                 );
                               },

@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:music_app/presentation/provider/search_provider/search_provider.dart';
-import 'package:music_app/presentation/widget/Not%20Found/not_found_widget.dart';
 
 class SearchField extends ConsumerWidget {
   final VoidCallback? onPressed;
@@ -16,12 +14,7 @@ class SearchField extends ConsumerWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8 * 2),
       child: TextFormField(
         onChanged: (value) {
-          if (value.isEmpty) {
-            const NotFound();
-          }
-          ref
-              .watch(searchProvider.notifier)
-              .songsearch(value);
+          ref.watch(searchProvider.notifier).songsearch(search: value);
         },
         controller: controller,
         decoration: InputDecoration(

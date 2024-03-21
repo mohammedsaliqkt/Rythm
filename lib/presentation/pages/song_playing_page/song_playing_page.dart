@@ -11,10 +11,8 @@ import 'package:music_app/presentation/widget/process_baar.dart';
 
 final AudioPlayer player = AudioPlayer();
 
-// ignore: must_be_immutable
 class SongPlayingPage extends ConsumerStatefulWidget {
-  SongPlayingPage({
-    // this.playsongs,
+  const SongPlayingPage({
     this.data,
     required this.index,
     super.key,
@@ -22,9 +20,8 @@ class SongPlayingPage extends ConsumerStatefulWidget {
   });
   final ConcatenatingAudioSource playlist;
   final List? data;
-  int index;
-  // final AudioSource option;
-  // final VoidCallback? playsongs;
+  final int index;
+
 
   @override
   ConsumerState<SongPlayingPage> createState() => _SongPlayingPageState();
