@@ -23,7 +23,7 @@ class LocalHomePage extends ConsumerWidget {
         title: AppTitle(
             textstyle: const TextStyle(),
             imgwidth: context.w(30),
-            image: "assets/icon/music_icon.png",
+            image: "assets/image/music_img.png",
             titileText: "Local Songs"),
       ),
       drawer: const DrawerWidget(),

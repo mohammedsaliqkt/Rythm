@@ -54,9 +54,9 @@ class _SongPlayingPageState extends ConsumerState<SongPlayingPage> {
     return Scaffold(
       appBar: AppBar(
         title: AppTitle(
-          image: "assets/image/zaagh.png",
+          image: "assets/image/music_img.png",
           titileText: "PLAYING FROM PLATLIST",
-          imgwidth: context.w(50),
+          imgwidth: context.w(35),
           fontsize: context.w(6),
           textstyle: TextStyle(fontSize: context.w(8 * 3)),
         ),
