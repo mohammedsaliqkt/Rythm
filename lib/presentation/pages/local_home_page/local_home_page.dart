@@ -19,66 +19,65 @@ class LocalHomePage extends ConsumerWidget {
     final song = ref.watch(getLocalAudioProvider);
 
     return Scaffold(
-        appBar: AppBar(
-          title: AppTitle(
-              textstyle: const TextStyle(),
-              imgwidth: context.w(30),
-              image: "assets/icon/music_icon.png",
-              titileText: "Local Songs"),
-        ),
-        drawer: const DrawerWidget(),
-        body: song.when(
-          data: (data) {
-            final List<AudioSource> audioSources = data
-                .map(
-                  (source) => AudioSource.file(
-                    source.data,
-                    tag: MediaItem(
-                      id: '1',
-                      title: source.title,
-                      artist: source.artist,
-                    ),
+      appBar: AppBar(
+        title: AppTitle(
+            textstyle: const TextStyle(),
+            imgwidth: context.w(30),
+            image: "assets/icon/music_icon.png",
+            titileText: "Local Songs"),
+      ),
+      drawer: const DrawerWidget(),
+      body: song.when(
+        data: (data) {
+          final List<AudioSource> audioSources = data
+              .map(
+                (source) => AudioSource.file(
+                  source.data,
+                  tag: MediaItem(
+                    id: '1',
+                    title: source.title,
+                    artist: source.artist,
                   ),
+                ),
+              )
+              .toList();
+          // create playlist
+          final ConcatenatingAudioSource playlist =
+              ConcatenatingAudioSource(children: audioSources);
+          return song.value == null
+              ? const Center(
+                  child: Text('song empty'),
                 )
-                .toList();
-            // create playlist
-            final ConcatenatingAudioSource playlist =
-                ConcatenatingAudioSource(children: audioSources);
-            return song.value == null
-                ? const Center(
-                    child: Text('song empty'),
-                  )
-                : ListView.separated(
-                    itemBuilder: (context, index) => LocalSongTile(
-                          data: song.value!,
-                          index: index,
-                          onTap: () {
-                            Navigator.push(context, MaterialPageRoute(
-                              builder: (context) {
-                                log(song.value![index].data.toString());
-                                log(song.value.toString());
-                                return  SongPlayingPage(
-                                  
-                                  data: song.value!,
-                                  index: index,
-                                  
-                                  playlist: playlist,
-                                );
-                              },
-                            ));
-                          },
-                        ),
-                    separatorBuilder: (context, index) => SizedBox(
-                          height: context.h(10),
-                        ),
-                    itemCount: song.value!.length);
-          },
-          error: (error, stackTrace) => Center(
-            child: Text(error.toString()),
-          ),
-          loading: () => const Center(
-            child: CircularProgressIndicator(),
-          ),
-        ));
+              : ListView.separated(
+                  itemBuilder: (context, index) => LocalSongTile(
+                        data: song.value!,
+                        index: index,
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) {
+                              log(song.value![index].data.toString());
+                              log(song.value.toString());
+                              return SongPlayingPage(
+                                data: song.value!,
+                                index: index,
+                                playlist: playlist,
+                              );
+                            },
+                          ));
+                        },
+                      ),
+                  separatorBuilder: (context, index) => SizedBox(
+                        height: context.h(10),
+                      ),
+                  itemCount: song.value!.length);
+        },
+        error: (error, stackTrace) => Center(
+          child: Text(error.toString()),
+        ),
+        loading: () => const Center(
+          child: CircularProgressIndicator(),
+        ),
+      ),
+    );
   }
 }
