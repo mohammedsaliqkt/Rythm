@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/core/utils/dynamic_size.dart';
+import 'package:rhthemix/core/utils/dynamic_size.dart';
 
 class MusicCategory extends StatelessWidget {
   final String musiccategory;

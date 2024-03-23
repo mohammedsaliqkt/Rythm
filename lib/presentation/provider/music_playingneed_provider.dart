@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:music_app/presentation/pages/song_playing_page/song_playing_page.dart';
+import 'package:rhthemix/presentation/pages/song_playing_page/song_playing_page.dart';
 
 final currentIndexProvider = Provider<int?>((ref) => player.currentIndex??0);
 

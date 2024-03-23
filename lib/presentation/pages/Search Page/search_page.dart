@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
-import 'package:music_app/core/utils/dynamic_size.dart';
-import 'package:music_app/presentation/pages/song_playing_page/song_playing_page.dart';
-import 'package:music_app/presentation/provider/search_provider/search_provider.dart';
-import 'package:music_app/presentation/widget/song_tile.dart';
-import 'package:music_app/presentation/widget/search_field_widget.dart';
+import 'package:rhthemix/core/utils/dynamic_size.dart';
+import 'package:rhthemix/presentation/pages/song_playing_page/song_playing_page.dart';
+import 'package:rhthemix/presentation/provider/search_provider/search_provider.dart';
+import 'package:rhthemix/presentation/widget/song_tile.dart';
+import 'package:rhthemix/presentation/widget/search_field_widget.dart';
 
 final StateProvider<bool> isDataFound = StateProvider<bool>((ref) => false);
 

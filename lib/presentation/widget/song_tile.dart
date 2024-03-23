@@ -23,9 +23,7 @@ class SongTile extends StatelessWidget {
       onTap: onListTap,
       title: Text(title),
       subtitle: Text(subtitle),
-      leading: Card(
-        child: Image.asset('assets/image/music_img.png'),
-      ),
+      leading: Image.asset('assets/image/music_img.png'),
       trailing: SizedBox(
         child: IconButton(
             onPressed: ontap,

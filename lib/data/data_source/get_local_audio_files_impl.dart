@@ -1,4 +1,4 @@
-import 'package:music_app/data/data_source/get_local_audio_files.dart';
+import 'package:rhthemix/data/data_source/get_local_audio_files.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'get_local_audio_files_impl.g.dart';

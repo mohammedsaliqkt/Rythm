@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:music_app/presentation/provider/search_provider/search_provider.dart';
+import 'package:rhthemix/presentation/provider/search_provider/search_provider.dart';
 
 class SearchField extends ConsumerWidget {
   final VoidCallback? onPressed;

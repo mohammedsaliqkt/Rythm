@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/core/utils/dynamic_size.dart';
-import 'package:music_app/presentation/pages/About%20Page/about_page.dart';
-import 'package:music_app/presentation/pages/Policy%20Page/policy_page.dart';
-import 'package:music_app/presentation/pages/terms%20&%20condition/tems_and_condition.dart';
-import 'package:music_app/presentation/widget/drawerlisttile_widget.dart';
+import 'package:rhthemix/core/utils/dynamic_size.dart';
+import 'package:rhthemix/presentation/pages/About%20Page/about_page.dart';
+import 'package:rhthemix/presentation/pages/Policy%20Page/policy_page.dart';
+import 'package:rhthemix/presentation/pages/terms%20&%20condition/tems_and_condition.dart';
+import 'package:rhthemix/presentation/widget/drawerlisttile_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DrawerWidget extends StatelessWidget {

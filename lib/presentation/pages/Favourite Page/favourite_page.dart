@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
-import 'package:music_app/core/utils/dynamic_size.dart';
-import 'package:music_app/presentation/pages/song_playing_page/song_playing_page.dart';
-import 'package:music_app/presentation/provider/dbprovider/db_provider.dart';
-import 'package:music_app/presentation/widget/app_title.dart';
-import 'package:music_app/presentation/widget/song_tile.dart';
+import 'package:rhthemix/core/utils/dynamic_size.dart';
+import 'package:rhthemix/presentation/pages/song_playing_page/song_playing_page.dart';
+import 'package:rhthemix/presentation/provider/dbprovider/db_provider.dart';
+import 'package:rhthemix/presentation/widget/app_title.dart';
+import 'package:rhthemix/presentation/widget/song_tile.dart';
 
 class FavouritePage extends ConsumerWidget {
   const FavouritePage({super.key});

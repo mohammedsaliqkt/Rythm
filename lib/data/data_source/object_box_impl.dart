@@ -1,5 +1,5 @@
-import 'package:music_app/data/model/object_box_model.dart';
-import 'package:music_app/objectbox.g.dart';
+import 'package:rhthemix/data/model/object_box_model.dart';
+import 'package:rhthemix/objectbox.g.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';

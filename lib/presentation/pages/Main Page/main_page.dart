@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:music_app/presentation/pages/Favourite%20Page/favourite_page.dart';
-import 'package:music_app/presentation/pages/Search%20Page/search_page.dart';
-import 'package:music_app/presentation/pages/local_home_page/local_home_page.dart';
+import 'package:rhthemix/presentation/pages/Favourite%20Page/favourite_page.dart';
+import 'package:rhthemix/presentation/pages/Search%20Page/search_page.dart';
+import 'package:rhthemix/presentation/pages/local_home_page/local_home_page.dart';
 
 final StateProvider<int> selectedIndex = StateProvider<int>((ref) => 0);
 

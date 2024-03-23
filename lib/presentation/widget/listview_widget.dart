@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:music_app/core/utils/dynamic_size.dart';
-import 'package:music_app/presentation/widget/listviewcontainer_widget.dart';
+import 'package:rhthemix/core/utils/dynamic_size.dart';
+import 'package:rhthemix/presentation/widget/listviewcontainer_widget.dart';
 
 class ListviewWidget extends StatelessWidget {
   final String listviewdiscription;

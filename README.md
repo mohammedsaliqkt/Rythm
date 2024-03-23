@@ -1,3 +1,3 @@
-# music_app
+# rhthemix
 
 A new Flutter project.

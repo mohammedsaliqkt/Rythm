@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:music_app/core/utils/dynamic_size.dart';
-import 'package:music_app/presentation/widget/app_title.dart';
-import 'package:music_app/presentation/widget/drawer_widget.dart';
-import 'package:music_app/presentation/widget/listview_widget.dart';
-import 'package:music_app/presentation/widget/music_category.dart';
+import 'package:rhthemix/core/utils/dynamic_size.dart';
+import 'package:rhthemix/presentation/widget/app_title.dart';
+import 'package:rhthemix/presentation/widget/drawer_widget.dart';
+import 'package:rhthemix/presentation/widget/listview_widget.dart';
+import 'package:rhthemix/presentation/widget/music_category.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

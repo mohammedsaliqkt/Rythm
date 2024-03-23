@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:music_app/data/model/object_box_model.dart';
-import 'package:music_app/presentation/provider/dbprovider/db_provider.dart';
-import 'package:music_app/presentation/provider/favprovider/favprovider.dart';
-import 'package:music_app/presentation/provider/get_music_entity_id_provider.dart';
+import 'package:rhthemix/data/model/object_box_model.dart';
+import 'package:rhthemix/presentation/provider/dbprovider/db_provider.dart';
+import 'package:rhthemix/presentation/provider/favprovider/favprovider.dart';
+import 'package:rhthemix/presentation/provider/get_music_entity_id_provider.dart';
 import 'package:on_audio_query/on_audio_query.dart';
 
 class LocalSongTile extends ConsumerWidget {
@@ -25,9 +25,10 @@ class LocalSongTile extends ConsumerWidget {
     return ListTile(
         onTap: onTap,
         leading: Card(
-          child: Image.asset("assets/image/music_img.png"),
+          elevation: 0,
+          child: Image.asset("assets/image/music_img.png",width: 32,),
         ),
-        title: Text(data[index].title),
+        title: Text(data[index]. title),
         subtitle: const Text("discription"),
         trailing: IconButton(
           onPressed: () {

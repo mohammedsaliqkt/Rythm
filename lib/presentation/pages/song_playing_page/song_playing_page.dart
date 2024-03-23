@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:music_app/core/utils/dynamic_size.dart';
-import 'package:music_app/presentation/provider/icon_provider.dart';
-import 'package:music_app/presentation/provider/music_playingneed_provider.dart';
-import 'package:music_app/presentation/provider/setaudiosource.dart';
-import 'package:music_app/presentation/widget/app_title.dart';
-import 'package:music_app/presentation/widget/musicplayingimage_widget.dart';
-import 'package:music_app/presentation/widget/process_baar.dart';
+import 'package:rhthemix/core/utils/dynamic_size.dart';
+import 'package:rhthemix/presentation/provider/icon_provider.dart';
+import 'package:rhthemix/presentation/provider/music_playingneed_provider.dart';
+import 'package:rhthemix/presentation/provider/setaudiosource.dart';
+import 'package:rhthemix/presentation/widget/app_title.dart';
+import 'package:rhthemix/presentation/widget/musicplayingimage_widget.dart';
+import 'package:rhthemix/presentation/widget/process_baar.dart';
 
 final AudioPlayer player = AudioPlayer();
 
