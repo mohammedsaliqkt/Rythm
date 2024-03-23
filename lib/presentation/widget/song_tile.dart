@@ -24,7 +24,7 @@ class SongTile extends StatelessWidget {
       title: Text(title),
       subtitle: Text(subtitle),
       leading: Card(
-        child: Image.asset('assets/image/zaagh.png'),
+        child: Image.asset('assets/image/music_img.png'),
       ),
       trailing: SizedBox(
         child: IconButton(

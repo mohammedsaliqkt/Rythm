@@ -22,7 +22,6 @@ class SongPlayingPage extends ConsumerStatefulWidget {
   final List? data;
   final int index;
 
-
   @override
   ConsumerState<SongPlayingPage> createState() => _SongPlayingPageState();
 }
@@ -80,11 +79,20 @@ class _SongPlayingPageState extends ConsumerState<SongPlayingPage> {
                 musicplayingimage: 'assets/image/background_img.jpg',
               ),
               SizedBox(
-                height: context.h(10),
+                height: context.h(15),
               ),
               Column(
                 children: [
-                  Text(widget.data![ref.watch(currentIndexProvider)!].title),
+                  Padding(
+                    padding:  EdgeInsets.symmetric(horizontal: context.w(32)),
+                    child: Text(
+                      widget.data![ref.watch(currentIndexProvider)!].title,
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                            fontWeight: FontWeight.bold,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                    ),
+                  ),
                   Padding(
                     padding: EdgeInsets.symmetric(
                       horizontal: context.w(8 * 4),
